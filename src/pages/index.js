@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
+import logo from "@site/static/img/fulllogo.png";
 
 export default function Home() {
   return (
@@ -19,11 +20,11 @@ export default function Home() {
           }}
         >
           <img
-            src="/img/fulllogo.png"
+            src={logo}
             alt="Gitsaurus logo"
             style={{
-              width: "10vw",
-              height: "10vw",
+              width: "12vw",
+              height: "12vw",
               objectFit: "contain",
             }}
           />
