@@ -10,7 +10,12 @@ export default function Home() {
       description="Git and GitHub help for software development students"
     >
       <main
-        style={{ padding: "3rem 1.5rem", maxWidth: "1000px", margin: "0 auto" }}
+        style={{
+          padding: "3rem 2rem",
+          width: "100%",
+          maxWidth: "1400px",
+          margin: "0 auto",
+        }}
       >
         <div
           style={{
@@ -33,11 +38,16 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gridTemplateColumns: "repeat(6, 1fr)",
             gap: "1.5rem",
+            width: "100%",
           }}
         >
-          <Link className="card padding--lg" to="/docs/setup/create-repository">
+          <Link
+            className="card padding--lg"
+            style={{ gridColumn: "span 2" }}
+            to="/docs/setup/create-repository"
+          >
             <h2>🚀 Set Up a Project</h2>
             <p>
               Create, fork, clone, or upload a repository and understand Git
@@ -45,7 +55,11 @@ export default function Home() {
             </p>
           </Link>
 
-          <Link className="card padding--lg" to="/docs/workflow/pull">
+          <Link
+            className="card padding--lg"
+            style={{ gridColumn: "span 2" }}
+            to="/docs/workflow/pull"
+          >
             <h2>🔁 Git & Team Workflow</h2>
             <p>
               Pull, branch, commit, push, create Pull Requests, review, and
@@ -55,6 +69,7 @@ export default function Home() {
 
           <Link
             className="card padding--lg"
+            style={{ gridColumn: "span 2" }}
             to="/docs/repository-management/branch-protection"
           >
             <h2>⚙️ Repository Management</h2>
@@ -64,12 +79,20 @@ export default function Home() {
             </p>
           </Link>
 
-          <Link className="card padding--lg" to="/docs/troubleshooting/intro">
+          <Link
+            className="card padding--lg"
+            style={{ gridColumn: "span 3" }}
+            to="/docs/troubleshooting/intro"
+          >
             <h2>🚨 Troubleshooting</h2>
             <p>Push rejected? Missing code? Merge conflict? Start here.</p>
           </Link>
 
-          <Link className="card padding--lg" to="/docs/commands/status">
+          <Link
+            className="card padding--lg"
+            style={{ gridColumn: "span 3" }}
+            to="/docs/commands/status"
+          >
             <h2>💻 Command Reference</h2>
             <p>Quickly look up common Git commands and what they do.</p>
           </Link>
