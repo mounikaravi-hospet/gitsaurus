@@ -30,7 +30,7 @@ If you are starting completely from scratch, creating a README is fine.
 
 If you already have a project on your computer, it is usually easier to create an **empty repository** and follow:
 
-[Upload an Existing Project](./upload-existing-project.md)
+[Upload an Existing Project](./upload-existing-repository.md)
 
 ## Recommended Repository Files
 

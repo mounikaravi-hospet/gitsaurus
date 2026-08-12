@@ -64,7 +64,7 @@ export default function Home() {
             </p>
           </Link>
 
-          <Link className="card padding--lg" to="/docs/troubleshooting">
+          <Link className="card padding--lg" to="/docs/troubleshooting/intro">
             <h2>🚨 Troubleshooting</h2>
             <p>Push rejected? Missing code? Merge conflict? Start here.</p>
           </Link>
