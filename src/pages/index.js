@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import logo from "@site/static/img/fulllogo.png";
+import styles from "./index.module.css";
 
 export default function Home() {
   return (
@@ -9,43 +10,18 @@ export default function Home() {
       title="Gitsaurus"
       description="Git and GitHub help for software development students"
     >
-      <main
-        style={{
-          padding: "3rem 2rem",
-          width: "100%",
-          maxWidth: "1400px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <main className={styles.home}>
+        <div className={styles.logoWrapper}>
           <img
             src={logo}
             alt="Gitsaurus logo"
-            style={{
-              width: "12vw",
-              height: "12vw",
-              objectFit: "contain",
-            }}
+            className={styles.logo}
           />
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(6, 1fr)",
-            gap: "1.5rem",
-            width: "100%",
-          }}
-        >
+        <div className={styles.grid}>
           <Link
-            className="card padding--lg"
-            style={{ gridColumn: "span 2" }}
+            className={`card padding--lg ${styles.card} ${styles.smallCard}`}
             to="/docs/setup/create-repository"
           >
             <h2>🚀 Set Up a Project</h2>
@@ -56,8 +32,7 @@ export default function Home() {
           </Link>
 
           <Link
-            className="card padding--lg"
-            style={{ gridColumn: "span 2" }}
+            className={`card padding--lg ${styles.card} ${styles.smallCard}`}
             to="/docs/workflow/pull"
           >
             <h2>🔁 Git & Team Workflow</h2>
@@ -68,8 +43,7 @@ export default function Home() {
           </Link>
 
           <Link
-            className="card padding--lg"
-            style={{ gridColumn: "span 2" }}
+            className={`card padding--lg ${styles.card} ${styles.smallCard}`}
             to="/docs/repository-management/branch-protection"
           >
             <h2>⚙️ Repository Management</h2>
@@ -80,8 +54,7 @@ export default function Home() {
           </Link>
 
           <Link
-            className="card padding--lg"
-            style={{ gridColumn: "span 3" }}
+            className={`card padding--lg ${styles.card} ${styles.largeCard}`}
             to="/docs/troubleshooting/intro"
           >
             <h2>🚨 Troubleshooting</h2>
@@ -89,8 +62,7 @@ export default function Home() {
           </Link>
 
           <Link
-            className="card padding--lg"
-            style={{ gridColumn: "span 3" }}
+            className={`card padding--lg ${styles.card} ${styles.largeCard}`}
             to="/docs/commands/status"
           >
             <h2>💻 Command Reference</h2>

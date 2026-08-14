@@ -1,23 +1,87 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.home {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  width: min(220px, 45vw);
+  height: auto;
+  object-fit: contain;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.card {
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+
+.smallCard {
+  grid-column: span 2;
+}
+
+.largeCard {
+  grid-column: span 3;
+}
+
+/* Tablet */
+@media (max-width: 996px) {
+  .home {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .smallCard,
+  .largeCard {
+    grid-column: span 1;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Mobile */
+@media (max-width: 600px) {
+  .home {
+    padding: 2rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .smallCard,
+  .largeCard {
+    grid-column: span 1;
+  }
+
+  .logo {
+    width: min(180px, 65vw);
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
 }
